@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weeknd</title>
+    <link rel="stylesheet" href="codes/Styles.css">
+</head>
+
+<body>
+    <!-- Header con menú -->
+    <header>
+        <h1>The Weeknd</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#albumes">Álbumes</a></li>
+                <li><a href="codes/galeria/galeria.html">Fotos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Contenido con margen -->
+    <div class="contenido-container">
+        <section class="contenido">
+
+            
+            <div class="foto"></div>
+            <div class="informacion-basica" id="informacion">
+                <h2>Información Básica</h2>
+                <p><strong>Nombre:</strong> Abel Makkonen Tesfaye</p>
+                <p><strong>Edad:</strong> 34 años</p>
+                <p><strong>Nombre artístico:</strong> The Weeknd</p>
+                <p><strong>Fecha de nacimiento:</strong> 16 de febrero de 1990</p>
+                <p><strong>Género musical:</strong> Pop, R&B, Soul, Electrónica</p>
+            </div>
+        </section>
+
+
+        
+        <section class="bio" id="biografia">
+            <h2>Biografía</h2>
+            <p id="bio-inicio">
+                The Weeknd, una de las superestrellas más importantes del pop del siglo XXI, es el nombre artístico de
+                Abel Makkonen
+                Tesfaye, un canadiense nacido en Ontario en 1990. Conocido mundialmente por su distintiva voz, sus
+                letras oscuras y
+                explícitas, y una producción innovadora, The Weeknd ha dejado una huella indeleble en la música
+                contemporánea.
+            </p>
+            <p id="mas-info" onclick="mostrarMasInfo()" style="cursor: pointer; color: blue;">Más información...</p>
+
+            <div id="biografia-completa" style="display: none;">
+                <p>Desde una infancia marcada por la adversidad, incluyendo la separación de sus padres y el consumo de
+                    drogas desde temprana edad, Abel encontró en la música su escape y su pasión. A través de sus
+                    primeros mixtapes, como O, se dio a conocer en el circuito musical,
+                    destacándose por su estilo único que fusiona el R&B con el pop experimental. Su carrera despegó
+                    rápidamente, logrando reconocimiento global con éxitos como "The Hills" y "Can't Feel My Face" en el
+                    álbum Beauty Behind the Madness (2015), convirtiéndose en una superestrella internacional.
+
+                    A lo largo de su carrera, The Weeknd ha colaborado con artistas de renombre como Daft Punk, Lana Del
+                    Rey y Travis Scott, y ha sido elogiado tanto por su musicalidad como por su capacidad para
+                    reinventarse. Su álbum After Hours (2020), que incluyó el histórico éxito "Blinding Lights",
+                    consolidó su estatus como uno de los artistas más influyentes de la música moderna. Además de su
+                    éxito musical, también ha incursionado en la actuación y ha sido nominado a múltiples premios,
+                    incluidos los Oscars.
+
+                    Con su sello XO y una serie de logros tanto en la música como en el cine, The Weeknd continúa siendo
+                    una figura clave en la industria musical, cuyo impacto se extiende más allá de los límites del pop,
+                    el R&B y la cultura pop en general.</p>
+            </div>
+        </section>
+
+
+
+        <!-- Sección de álbumes con imágenes -->
+<section id="albumes" class="albumes">
+    <h2>Álbumes</h2>
+    <div class="album" onclick="mostrarCanciones('House Of Balloons (2011)')">
+        <img src="Imagenes/balloons.jpg" alt="O" class="album-imagen">
+        <h3>House Of Balloons (2011)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('Kiss Land (2013)')">
+        <img src="Imagenes/The-Weeknd-Kiss-Land-Album-Cover.jpg" alt="Kiss Land (2013)" class="album-imagen">
+        <h3>Kiss Land (2013)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('Beauty Behind the Madness (2015)')">
+        <img src="Imagenes/the_weeknd_beauty_behind_the_madness.jpg" alt="Beauty Behind the Madness (2015)" class="album-imagen">
+        <h3>Beauty Behind the Madness (2015)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('Starboy (2016)')">
+        <img src="Imagenes/starboy.jpg" alt="Starboy (2016)" class="album-imagen">
+        <h3>Starboy (2016)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('My Dear Melancholy (2018)')">
+        <img src="Imagenes/My-Dear-Melancholy.jpg" alt="My Dear Melancholy (2018)" class="album-imagen">
+        <h3>My Dear Melancholy (2018)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('After Hours (2020)')">
+        <img src="Imagenes/after-hours.jpg" alt="After Hours (2020)" class="album-imagen">
+        <h3>After Hours (2020)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('Dawn FM (2022)')">
+        <img src="Imagenes/DAWN-FM.jpg" alt="Dawn FM (2022)" class="album-imagen">
+        <h3>Dawn FM (2022)</h3>
+    </div>
+    <div class="album" onclick="mostrarCanciones('Hurry Up Tomorrow (2025)')">
+        <img src="Imagenes/HURRY-UP-TOMORROW.jpg" alt="Hurry Up Tomorrow (2025)" class="album-imagen">
+        <h3>Hurry Up Tomorrow (2025)</h3>
+    </div>
+</section>
+
+<!-- Ventana emergente para mostrar canciones -->
+<div id="ventana-canciones" class="ventana">
+    <div class="contenido-ventana">
+        <h3 id="album-titulo"></h3>
+        <ul id="canciones-lista"></ul>
+        <audio id="reproductor" controls></audio>
+        <button onclick="cerrarVentana()">Cerrar</button>
+    </div>
+</div>
+
+
+    <script src="codes/script.js"></script>
+
+    <footer style="background-color: #424242; color: white; text-align: center; padding: 15px;">
+        <p>Síguenos en:</p>
+        <div>
+            <a href="https://facebook.com/artista" target="_blank">
+                <img src="icons/facebook.png" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://twitter.com/artista" target="_blank">
+                <img src="icons/twitter.png" alt="Twitter" width="30" height="30">
+            </a>
+            <a href="https://instagram.com/artista" target="_blank">
+                <img src="icons/instagram.png" alt="Instagram" width="30" height="30">
+            </a>
+        </div>
+        <p>© 2024. Página creada por <strong>Zuriel Nava</strong>.</p>
+    </footer>
+    
+</body>
+
+</html>
