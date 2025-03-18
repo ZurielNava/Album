@@ -1,0 +1,152 @@
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  background-color: #e9e9e9e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el header */
+header {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../Imagenes/TWFONDO.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Aplica el desenfoque */
+  z-index: -1; /* Envía la imagen al fondo */
+}
+
+header h1 {
+  font-size: 100px; /* Aumenta el tamaño del texto */
+  font-weight: bold; /* Hace que el texto sea más grueso */
+  text-align: center; /* Centra el título */
+  margin: 20px 20px; /* Agrega espacio arriba y abajo */
+}
+
+/* Estilos del menú */
+nav {
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block; /* Cambia a bloque para permitir el padding */
+  margin: 0 30px; /* Espaciado entre botones */
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: #00000079; /* Color verde para los botones */
+  padding: 20px 25px; /* Tamaño del botón */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background 0.3s, transform 0.2s; /* Animación suave */
+  display: inline-block;
+}
+
+.menu li a:hover {
+  background-color: #ff004c; /* Color al pasar el ratón */
+  transform: scale(1.1); /* Efecto de agrandado */
+}
+
+/* Contenedor con margen */
+.contenido-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*Estilo de la galeria*/
+.galeria
+{
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.galeria li{
+    margin: 5px;
+  }
+.galeria img{
+    width: 150px;
+    height: 100px;
+    border-radius: 25px;
+    border: 2px solid #73f304;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  /*Estilo para la ventana modal*/
+.modal
+{
+  display: none;
+}
+.modal:target
+{
+  display: block;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal h3
+{
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 30px;
+}
+.imagen{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen a:nth-child(2)
+{
+  margin: 0;
+  height: 100%;
+}
+
+.foto
+{
+  max-width: 60%;
+  max-height: 60%;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+.h2 {
+  text-align: center;
+}
