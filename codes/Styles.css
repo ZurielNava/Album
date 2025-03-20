@@ -52,16 +52,16 @@ nav {
 
 .menu li {
     display: inline-block; /* Cambia a bloque para permitir el padding */
-    margin: 0 30px; /* Espaciado entre botones */
+    margin: 0 20px; /* Espaciado entre botones */
 }
 
 .menu li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     background-color: #00000079; /* Color verde para los botones */
-    padding: 20px 25px; /* Tamaño del botón */
+    padding: 15px 20px; /* Tamaño del botón */
     border-radius: 8px; /* Bordes redondeados */
     transition: background 0.3s, transform 0.2s; /* Animación suave */
     display: inline-block;
@@ -140,12 +140,6 @@ nav {
     text-align: justify; /* Justificar el texto */
 }
 
-
-
-
-
-
-
 /* Estilo para la biografía */
 .bio {
     margin-top: 20px;
@@ -186,12 +180,6 @@ nav {
     font-size: 20px; /* Aumenta el tamaño */
     font-weight: bold;
 }
-
-
-
-
-
-
 
 /* Centrar el título "Álbumes" */
 #albumes h2 {
@@ -311,6 +299,111 @@ button:hover {
     width: 80%;
     max-height: 80vh;
     overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
+
+/* Estilo para la ventana de la letra */
+#ventana-letra {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto; /* Permite desplazarse si la letra es muy larga */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Asegura que se muestra encima de otros elementos */
+    text-align: center;
+    color: #333;
+    display: none;
+}
+
+/* Cerrar ventana de la letra */
+#cerrar-letra {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff0000; /* Rojo para llamar la atención */
+}
+
+/* Estilo para la letra de la canción */
+#letra-cancion {
+    font-family: 'Georgia', serif; /* Fuente elegante y legible */
+    font-size: 18px; /* Tamaño adecuado para leer */
+    line-height: 1.6; /* Mejor legibilidad */
+    text-align: justify; /* Justifica el texto */
+    color: #444; /* Color gris oscuro */
+    margin: 0 10px; /* Espaciado a los lados */
+    white-space: pre-line; /* Permite los saltos de línea dentro de la letra */
+}
+#letra-cancion {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#letra-cancion.mostrar {
+    opacity: 1;
+}
+
+#videos {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.video {
+    margin: 10px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+video, iframe {
+    width: 100%;
+    height: 200px;
+}
+
+video + p, iframe + p {
+    text-align: center;
+    font-size: 14px;
+}
+/* Estilo para la sección de redes sociales */
+.redes-sociales {
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.redes-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.red-social {
+    width: 100px;
+    text-align: center;
+}
+
+.red-social img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.red-social p {
+    font-size: 16px;
+    font-weight: bold;
+}
+

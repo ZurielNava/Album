@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* Estilo para el header */
+header {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Imagenes/TWFONDO.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Aplica el desenfoque */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+header h1 {
+    font-size: 100px; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    text-align: center; /* Centra el título */
+    margin: 20px 20px; /* Agrega espacio arriba y abajo */
+}
+
+/* Estilos del menú */
+nav {
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block; /* Cambia a bloque para permitir el padding */
+    margin: 0 30px; /* Espaciado entre botones */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: #00000079; /* Color verde para los botones */
+    padding: 10px 15px; /* Tamaño del botón */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background 0.3s, transform 0.2s; /* Animación suave */
+    display: inline-block;
+}
+
+.menu li a:hover {
+    background-color: #ff004c; /* Color al pasar el ratón */
+    transform: scale(1.1); /* Efecto de agrandado */
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #004d00;
+}
+
+.autor-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.autor-imagen {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #006600;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #004d00;
+    color: white;
+    margin-top: 20px;
+}
