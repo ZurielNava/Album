@@ -17,6 +17,8 @@
                 <li><a href="#informacion">Información</a></li>
                 <li><a href="#albumes">Álbumes</a></li>
                 <li><a href="codes/galeria/galeria.html">Fotos</a></li>
+                <li><a href="codes/Autor.html">creado por:</a></li>
+
             </ul>
         </nav>
     </header>
@@ -78,6 +80,10 @@
         <!-- Sección de álbumes con imágenes -->
 <section id="albumes" class="albumes">
     <h2>Álbumes</h2>
+    <div class="album" onclick="mostrarCanciones('After Hours (2020)')">
+        <img src="Imagenes/after-hours.jpg" alt="After Hours (2020)" class="album-imagen">
+        <h3>After Hours (2020)</h3>
+    </div>
     <div class="album" onclick="mostrarCanciones('House Of Balloons (2011)')">
         <img src="Imagenes/balloons.jpg" alt="O" class="album-imagen">
         <h3>House Of Balloons (2011)</h3>
@@ -98,10 +104,6 @@
         <img src="Imagenes/My-Dear-Melancholy.jpg" alt="My Dear Melancholy (2018)" class="album-imagen">
         <h3>My Dear Melancholy (2018)</h3>
     </div>
-    <div class="album" onclick="mostrarCanciones('After Hours (2020)')">
-        <img src="Imagenes/after-hours.jpg" alt="After Hours (2020)" class="album-imagen">
-        <h3>After Hours (2020)</h3>
-    </div>
     <div class="album" onclick="mostrarCanciones('Dawn FM (2022)')">
         <img src="Imagenes/DAWN-FM.jpg" alt="Dawn FM (2022)" class="album-imagen">
         <h3>Dawn FM (2022)</h3>
@@ -111,6 +113,59 @@
         <h3>Hurry Up Tomorrow (2025)</h3>
     </div>
 </section>
+<!-- Sección de Videos -->
+<section id="videos">
+    <h2>Videos</h2>
+    <!-- Videos locales -->
+    <div class="video-container">
+        <div class="video">
+            <video width="560" height="315" controls>
+                <source src="/Videos/The Weeknd - Save Your Tears (Official Music Video).mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="video">
+            <video width="560" height="315" controls>
+                <source src="/Videos/The Weeknd - The Hills.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="video">
+            <video width="560" height="315" controls>
+                <source src="/Videos/The Weeknd - Call Out My Name (Official Video).mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            </div>
+    </div>
+</section>
+<!-- Sección de Redes Sociales -->
+<section id="redes-sociales" class="redes-sociales">
+    <h2>Síguelo en sus Redes Sociales</h2>
+    <div class="redes-container">
+        <!-- Facebook -->
+        <div class="red-social">
+            <a href="https://www.facebook.com/TheWeeknd" target="_blank">
+                <img src="/Imagenes/facebook.png" alt="Facebook" class="icono-red">
+            </a>
+            <p>Facebook</p>
+        </div>
+        <!-- Instagram -->
+        <div class="red-social">
+            <a href="https://www.instagram.com/theweeknd/" target="_blank">
+                <img src="/Imagenes/instagram.png" alt="Instagram" class="icono-red">
+            </a>
+            <p>Instagram</p>
+        </div>
+        <!-- Twitter -->
+        <div class="red-social">
+            <a href="http://youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ" target="_blank">
+                <img src="/Imagenes/youtube.png" alt="youtube" class="icono-red">
+            </a>
+            <p>Youtube</p>
+        </div>
+    </div>
+</section>
+
 
 <!-- Ventana emergente para mostrar canciones -->
 <div id="ventana-canciones" class="ventana">
@@ -122,24 +177,29 @@
     </div>
 </div>
 
-
-    <script src="codes/script.js"></script>
+<!-- Ventana lateral para mostrar la letra -->
+<div id="ventana-letra">
+    <span id="cerrar-letra" onclick="cerrarLetra()">×</span>
+    <div id="letra-cancion"></div>
+</div>
 
     <footer style="background-color: #424242; color: white; text-align: center; padding: 15px;">
         <p>Síguenos en:</p>
         <div>
-            <a href="https://facebook.com/artista" target="_blank">
-                <img src="icons/facebook.png" alt="Facebook" width="30" height="30">
+            <a href="https://www.facebook.com/ZurielNavaH/" target="_blank">
+                <img src="/Imagenes/facebook.png" alt="Facebook" width="30" height="30">
             </a>
-            <a href="https://twitter.com/artista" target="_blank">
-                <img src="icons/twitter.png" alt="Twitter" width="30" height="30">
+            <a href="" target="_blank">
+                <img src="/Imagenes/instagram.png" alt="instagram" width="50" height="30">
             </a>
-            <a href="https://instagram.com/artista" target="_blank">
-                <img src="icons/instagram.png" alt="Instagram" width="30" height="30">
+            <a href="/codes/Autor.html" target="_blank">
+                <img src="/Imagenes/perfil.webp" alt="perfil" width="30" height="30">
             </a>
         </div>
-        <p>© 2024. Página creada por <strong>Zuriel Nava</strong>.</p>
+        <p>© 2025. Página creada por <strong>Pablo Zuriel Nava Hernadez</strong>.</p>
     </footer>
+
+    <script src="codes/script.js"></script>
     
 </body>
 
